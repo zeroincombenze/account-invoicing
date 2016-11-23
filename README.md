@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/OCA/account-invoicing.svg?branch=9.0)](https://travis-ci.org/OCA/account-invoicing)
-[![Coverage Status](https://coveralls.io/repos/OCA/account-invoicing/badge.svg?branch=9.0)](https://coveralls.io/r/OCA/account-invoicing?branch=9.0)
+[![Build Status](https://travis-ci.org/zeroincombenze/account-invoicing.svg?branch=9.0)](https://travis-ci.org/zeroincombenze/account-invoicing)
+[![Coverage Status](https://coveralls.io/repos/zeroincombenze/account-invoicing/badge.svg?branch=9.0)](https://coveralls.io/r/zeroincombenze/account-invoicing?branch=9.0)
 
 OCA account invoicing modules for Odoo
 ======================================
