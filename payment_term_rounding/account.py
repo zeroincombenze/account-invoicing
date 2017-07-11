@@ -25,7 +25,7 @@ import time
 from openerp.osv import orm, fields
 from openerp.tools.float_utils import float_round
 
-import openerp.addons.decimal_precision as dp
+import decimal_precision as dp
 from openerp.tools import DEFAULT_SERVER_DATE_FORMAT
 
 

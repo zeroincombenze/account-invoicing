@@ -22,7 +22,7 @@ from openerp.osv import orm, fields
 from openerp.tools.float_utils import float_round, float_compare
 from openerp.tools.translate import _
 
-import openerp.addons.decimal_precision as dp
+import decimal_precision as dp
 
 
 class AccountInvoice(orm.Model):
