@@ -24,6 +24,14 @@ Translation Status
 [![Transifex Status](https://www.transifex.com/projects/p/OCA-account-invoicing-7-0/chart/image_png)](https://www.transifex.com/projects/p/OCA-account-invoicing-7-0)
 
 
+[![it](http://www.shs-av.com/wp-content/it_IT.png)](http://wiki.zeroincombenze.org/it/Odoo/7.0/man)
+
+Moduli Odoo Italia
+
+Differenze rispetto localizzazione ufficiale Odoo/OCA:
+
+- Corretto errore "import openerp.addons.decimal_precision" https://github.com/OCA/OCB/issues/629
+
 ----
 
 OCA, or the Odoo Community Association, is a nonprofit organization whose 
@@ -49,4 +57,5 @@ is mainly designed for Italian law and markeplace.
 Everytime, every Odoo DB and customized code can be deployed on local server too.
 
 [//]: # (end copyright)
+
 [![chat with us](https://www.shs-av.com/wp-content/chat_with_us.gif)](https://tawk.to/85d4f6e06e68dd4e358797643fe5ee67540e408b)
