@@ -60,4 +60,38 @@ Everytime, every Odoo DB and customized code can be deployed on local server too
 
 [//]: # (end copyright)
 
+[//]: # (addons)
+
+
+Available addons
+----------------
+addon | version | OCA version | summary
+--- | --- | --- | ---
+[account_invoice_currency_rate](account_invoice_currency_rate/) | 0.1 |  N/D  | account_invoice_currency_rate
+[account_invoice_customer_ref_unique](account_invoice_customer_ref_unique/) | 1.0 |  N/D  | Unique Customer Reference in Invoice
+[account_invoice_default_salesteam](account_invoice_default_salesteam/) | 1.1 |  N/D  | Default Sales Team on Invoice
+[account_invoice_force_number](account_invoice_force_number/) | 0.1 |  N/D  | Force Invoice Number
+[account_invoice_merge](account_invoice_merge/) | 1.1.1 |  N/D  | Account Invoice Merge Wizard
+[account_invoice_partner](account_invoice_partner/) | 0.1 |  N/D  | Automatically select invoicing partner on invoice
+[account_invoice_purchase_origin](account_invoice_purchase_origin/) | 1.1 |  N/D  | Account Invoice Purchase Origin
+[account_invoice_rounding](account_invoice_rounding/) | 1.0 |  N/D  | Unit rounded invoice
+[account_invoice_sale_origin](account_invoice_sale_origin/) | 1.1 |  N/D  | Account Invoice Sale Origin
+[account_invoice_shipping_address](account_invoice_shipping_address/) | 0.1.1 |  N/D  | Invoice Shipping Address
+[account_invoice_supplier_ref_unique](account_invoice_supplier_ref_unique/) | 1.0 |  N/D  | Unique Supplier Invoice Number in Invoice
+[account_invoice_template](account_invoice_template/) | 0.1 |  N/D  | Account Invoice Template
+[account_invoice_uom](account_invoice_uom/) | 1.0 |  N/D  | Unit of measure for invoices
+[account_invoice_zero](account_invoice_zero/) | 1.0 |  N/D  | Account Invoice Zero
+[account_origin_document_on_credit_note](account_origin_document_on_credit_note/) | 1.0 |  N/D  | Origin Document on Credit Note
+[invoice_fiscal_position_update](invoice_fiscal_position_update/) | 1.0 |  N/D  | Changing the fiscal position of an invoice will auto-update invoice lines
+[invoice_line_description](invoice_line_description/) | 0.1 |  N/D  | Invoice line description
+[invoice_line_no_picking_name](invoice_line_no_picking_name/) | 0.1 |  N/D  | Invoice line no picking name
+[invoice_validation_wkfl](invoice_validation_wkfl/) | 7.0.1.0.1 |  N/D  | Add "To Send" and "To Validate" states in Invoices
+[payment_term_rounding](payment_term_rounding/) | 1.0 |  N/D  | Rounding on payment term
+[product_customer_code_invoice](product_customer_code_invoice/) | 1.0 |  N/D  | Product Customer code for account invoice
+[sale_order_partial_invoice](sale_order_partial_invoice/) | 1.1 |  N/D  | Sale Partial Invoice
+[stock_invoice_picking](stock_invoice_picking/) | 0.1 |  N/D  | Invoice picking
+[stock_invoice_picking_incoterm](stock_invoice_picking_incoterm/) | 0.1 |  N/D  | Stock Invoice Picking Incoterm
+
+[//]: # (end addons)
+
 [![chat with us](https://www.shs-av.com/wp-content/chat_with_us.gif)](https://tawk.to/85d4f6e06e68dd4e358797643fe5ee67540e408b)
