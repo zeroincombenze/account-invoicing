@@ -8,7 +8,7 @@
 [![try it](http://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-try-it-10.svg)](http://erp10.zeroincombenze.it)
 
 
-[![en](http://www.shs-av.com/wp-content/en_US.png)](http://wiki.zeroincombenze.org/it/Odoo/7.0/man)
+[![en](https://github.com/zeroincombenze/grymb/blob/master/flags/en_US.png)](https://www.facebook.com/groups/openerp.italia/)
 
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
 ================================================================
@@ -29,16 +29,20 @@ Installation
 ------------
 
 
+
 Nothing special.
 
 Configuration
 -------------
 
 
+
 Nothing to do.
 
 
 Usage
+-----
+
 -----
 
 =====
@@ -59,10 +63,12 @@ Known issues / Roadmap
 ----------------------
 
 
+
 * When changing the pricelist, give the possibility to recompute prices;
 
 Bug Tracker
 -----------
+
 
 
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/account-invoicing/issues>`_.
@@ -75,9 +81,12 @@ Credits
 -------
 
 
+
 [![Odoo Italia Associazione]]
 
+
 ### Contributors
+
 
 
 * Sylvain LE GAL (https://twitter.com/legalsylvain)
@@ -85,6 +94,8 @@ Credits
 ### Funders
 
 ### Maintainer
+
+
 
 
 .. image:: https://odoo-community.org/logo.png
