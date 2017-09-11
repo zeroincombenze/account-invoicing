@@ -30,6 +30,7 @@ Installation
 
 
 
+
 Nothing special.
 
 Configuration
@@ -37,10 +38,13 @@ Configuration
 
 
 
+
 Nothing to do.
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -64,10 +68,12 @@ Known issues / Roadmap
 
 
 
+
 * When changing the pricelist, give the possibility to recompute prices;
 
 Bug Tracker
 -----------
+
 
 
 
@@ -82,10 +88,13 @@ Credits
 
 
 
+
 [![Odoo Italia Associazione]]
 
 
+
 ### Contributors
+
 
 
 
@@ -94,6 +103,8 @@ Credits
 ### Funders
 
 ### Maintainer
+
+
 
 
 
