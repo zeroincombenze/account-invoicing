@@ -38,11 +38,15 @@ Installation
 ------------
 
 
+
 Configuration
 -------------
 
 
+
 Usage
+-----
+
 -----
 
 -----
@@ -51,8 +55,10 @@ Known issues / Roadmap
 ----------------------
 
 
+
 Bug Tracker
 -----------
+
 
 
 
@@ -67,10 +73,13 @@ Credits
 
 
 
+
 [![Odoo Italia Associazione]]
 
 
+
 ### Contributors
+
 
 
 
@@ -83,6 +92,8 @@ Akim Juillerat <akim.juillerat@camptocamp.com>
 ### Funders
 
 ### Maintainer
+
+
 
 
 

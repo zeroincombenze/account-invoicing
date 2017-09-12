@@ -22,11 +22,15 @@ Installation
 ------------
 
 
+
 Configuration
 -------------
 
 
+
 Usage
+-----
+
 -----
 
 -----
@@ -36,11 +40,13 @@ Known issues / Roadmap
 
 
 
+
 Future possible improvement :
 Blocking invoice can also mean "do not send overdue reminders", so the blocking flag could be displayed on both supplier and customer invoices.
 
 Bug Tracker
 -----------
+
 
 
 
@@ -54,6 +60,7 @@ Credits
 
 
 
+
 Images
 
 * Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
@@ -61,7 +68,9 @@ Images
 [![Odoo Italia Associazione]]
 
 
+
 ### Contributors
+
 
 
 
@@ -72,6 +81,8 @@ Images
 ### Funders
 
 ### Maintainer
+
+
 
 
 
