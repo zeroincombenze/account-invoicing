@@ -26,8 +26,10 @@ Installation
 
 
 
+
 Configuration
 -------------
+
 
 
 
@@ -36,6 +38,8 @@ No specific configuration needed. This module uses the standard
 configuration of the fiscal positions.
 
 Usage
+-----
+
 -----
 
 -----
@@ -53,8 +57,10 @@ Known issues / Roadmap
 
 
 
+
 Bug Tracker
 -----------
+
 
 
 
@@ -70,11 +76,14 @@ Credits
 
 
 
+
 [![Odoo Italia Associazione]]
 
 
 
+
 ### Contributors
+
 
 
 
@@ -86,6 +95,8 @@ Credits
 ### Funders
 
 ### Maintainer
+
+
 
 
 
