@@ -25,8 +25,10 @@ Installation
 
 
 
+
 Configuration
 -------------
+
 
 
 
@@ -42,6 +44,8 @@ week, but it is disabled by default. To enable it:
 #. Save.
 
 Usage
+-----
+
 -----
 
 -----
@@ -84,8 +88,10 @@ Known issues / Roadmap
 
 
 
+
 Bug Tracker
 -----------
+
 
 
 
@@ -101,11 +107,14 @@ Credits
 
 
 
+
 [![Odoo Italia Associazione]]
 
 
 
+
 ### Contributors
+
 
 
 
@@ -116,6 +125,8 @@ Credits
 ### Funders
 
 ### Maintainer
+
+
 
 
 

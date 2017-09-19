@@ -25,12 +25,16 @@ Installation
 
 
 
+
 Configuration
 -------------
 
 
 
+
 Usage
+-----
+
 -----
 
 -----
@@ -86,12 +90,14 @@ Known issues / Roadmap
 
 
 
+
 * This addon is a pseudobackport of a functionality that exists natively in
   v10, plus a fix for https://github.com/odoo/odoo/issues/13974, so this addon
   will never have to be migrated to v10.
 
 Bug Tracker
 -----------
+
 
 
 
@@ -107,6 +113,7 @@ Credits
 
 
 
+
 Images
 
 * Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
@@ -115,7 +122,9 @@ Images
 
 
 
+
 ### Contributors
+
 
 
 
@@ -125,6 +134,8 @@ Images
 ### Funders
 
 ### Maintainer
+
+
 
 
 
