@@ -29,13 +29,17 @@ Installation
 
 
 
+
 Configuration
 -------------
 
 
 
 
+
 Usage
+-----
+
 -----
 
 -----
@@ -50,8 +54,10 @@ Known issues / Roadmap
 
 
 
+
 Bug Tracker
 -----------
+
 
 
 
@@ -70,7 +76,9 @@ Credits
 
 
 
+
 [![Odoo Italia Associazione]]
+
 
 
 
@@ -81,11 +89,14 @@ Credits
 
 
 
+
 * Cédric Pigeon <cedric.pigeon@acsone.eu>
 
 ### Funders
 
 ### Maintainer
+
+
 
 
 

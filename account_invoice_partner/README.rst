@@ -26,6 +26,7 @@ Installation
 
 
 
+
 There are no specific installation instructions for this module.
 Just click on install buttom
 
@@ -36,10 +37,13 @@ Configuration
 
 
 
+
 There are no specific configuration instructions for this module.
 After you need to configure on partner profile, one contact partner as "invoice address"
 
 Usage
+-----
+
 -----
 
 -----
@@ -59,8 +63,10 @@ Known issues / Roadmap
 
 
 
+
 Bug Tracker
 -----------
+
 
 
 
@@ -79,6 +85,7 @@ Credits
 
 
 
+
 Images
 
 * Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
@@ -88,7 +95,9 @@ Images
 
 
 
+
 ### Contributors
+
 
 
 
@@ -101,6 +110,8 @@ Images
 ### Funders
 
 ### Maintainer
+
+
 
 
 
