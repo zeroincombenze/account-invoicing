@@ -26,13 +26,17 @@ Installation
 
 
 
+
 Configuration
 -------------
 
 
 
 
+
 Usage
+-----
+
 -----
 
 -----
@@ -53,8 +57,10 @@ Known issues / Roadmap
 
 
 
+
 Bug Tracker
 -----------
+
 
 
 
@@ -72,7 +78,9 @@ Credits
 
 
 
+
 [![Odoo Italia Associazione]]
+
 
 
 
@@ -83,11 +91,14 @@ Credits
 
 
 
+
 * Eficent Business and IT Consulting Services S.L. <contact@eficent.com>
 
 ### Funders
 
 ### Maintainer
+
+
 
 
 

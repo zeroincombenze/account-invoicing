@@ -34,6 +34,7 @@ Installation
 
 
 
+
 There are no specific installation instructions for this module.
 
 Configuration
@@ -43,9 +44,12 @@ Configuration
 
 
 
+
 There are no specific configuration instructions for this module.
 
 Usage
+-----
+
 -----
 
 -----
@@ -70,10 +74,12 @@ Known issues / Roadmap
 
 
 
+
 None.
 
 Bug Tracker
 -----------
+
 
 
 
@@ -91,7 +97,9 @@ Credits
 
 
 
+
 [![Odoo Italia Associazione]]
+
 
 
 
@@ -102,11 +110,14 @@ Credits
 
 
 
+
 * Olivier Laurent (<olivier.laurent@acsone.eu>)
 
 ### Funders
 
 ### Maintainer
+
+
 
 
 

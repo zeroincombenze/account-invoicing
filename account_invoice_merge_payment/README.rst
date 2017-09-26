@@ -26,6 +26,7 @@ Installation
 
 
 
+
 * The module is automatically installed when account_invoice_merge and
   account_payment_partner are installed
 
@@ -35,7 +36,10 @@ Configuration
 
 
 
+
 Usage
+-----
+
 -----
 
 -----
@@ -63,8 +67,10 @@ Known issues / Roadmap
 
 
 
+
 Bug Tracker
 -----------
+
 
 
 
@@ -83,12 +89,15 @@ Credits
 
 
 
+
 [![Odoo Italia Associazione]]
 
 
 
 
+
 ### Contributors
+
 
 
 
@@ -101,6 +110,8 @@ Credits
 ### Funders
 
 ### Maintainer
+
+
 
 
 
