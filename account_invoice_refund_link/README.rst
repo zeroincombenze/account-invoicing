@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Link refund invoice with original
+=================================
 
 This module links customer and supplier refunds with the invoice that originate
 them (and invoice lines).
@@ -34,6 +35,8 @@ Configuration
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -90,7 +93,6 @@ Images
 
 * Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
 
-[![Odoo Italia Associazione]]
 
 
 

@@ -15,6 +15,7 @@
     :alt: License: AGPL-3
 
 Display in the invoice supplier form the fiscal period next to the invoice date
+===============================================================================
 
 This module was written to improve the form of the supplier invoice (and refund) 
 by displaying both the invoice date and the fiscal period fields side by side. 
@@ -48,6 +49,8 @@ Configuration
 There are no specific configuration instructions for this module.
 
 Usage
+-----
+
 -----
 
 -----
@@ -98,7 +101,6 @@ Credits
 
 
 
-[![Odoo Italia Associazione]]
 
 
 

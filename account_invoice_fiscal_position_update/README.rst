@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Invoice Fiscal Position Update
+==============================
 
 With this module, when a user changes the fiscal position of an invoice, the
 taxes and the accounts on all the invoice lines which have a product are
@@ -40,6 +41,8 @@ No specific configuration needed. This module uses the standard
 configuration of the fiscal positions.
 
 Usage
+-----
+
 -----
 
 -----
@@ -84,7 +87,6 @@ Credits
 
 
 
-[![Odoo Italia Associazione]]
 
 
 

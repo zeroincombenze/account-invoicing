@@ -13,6 +13,7 @@
 ================================================================================================
 
 OCA account invoicing modules for Odoo
+======================================
 
 This project aim to deal with modules related to manage invoicing in a generic way. You'll find modules that:
 
@@ -31,7 +32,7 @@ addon | version | OCA version | summary
 --- | --- | --- | ---
 [account_group_invoice_line](account_group_invoice_line/) | 10.0.1.0.0 | :repeat: | Add option to group invoice lines per account
 [account_invoice_check_total](account_invoice_check_total/) | 10.0.1.0.0 | :repeat: | Check if the verification total is equal to the bill's total
-[account_invoice_fiscal_position_update](account_invoice_fiscal_position_update/) | 10.0.1.0.0 | :repeat: | Changing the fiscal position of an invoice will auto-update invoice lines
+[account_invoice_fiscal_position_update](account_invoice_fiscal_position_update/) | 10.0.1.0.0 | 10.0.1.0.1 | Changing the fiscal position of an invoice will auto-update invoice lines
 [account_invoice_force_number](account_invoice_force_number/) | 10.0.1.0.0 | :repeat: | Allows to force invoice numbering on specific invoices
 [account_invoice_line_description](account_invoice_line_description/) | 10.0.1.0.0 | :repeat: | Account invoice line description
 [account_invoice_line_sequence](account_invoice_line_sequence/) | 10.0.1.0.0 | :repeat: | Adds sequence field on invoice lines to manage its order.
@@ -51,7 +52,7 @@ addon | version | OCA version | summary
 --- | --- | --- | ---
 [account_invoice_customer_ref_unique](account_invoice_customer_ref_unique/) | 1.0 (unported) | :repeat: | Unique Customer Reference in Invoice
 [account_invoice_line_sort](account_invoice_line_sort/) | 8.0.0.1.0 (unported) | :repeat: | Manage sort of customer invoice lines by customers
-[account_invoice_merge_payment](account_invoice_merge_payment/) | 8.0.0.1.0 (unported) | :repeat: | Use invoice merge regarding fields on Account Payment Partner
+[account_invoice_merge_payment](account_invoice_merge_payment/) | 8.0.0.1.0 (unported) | 10.0.1.0.0 (unported) | Use invoice merge regarding fields on Account Payment Partner
 [account_invoice_merge_purchase](account_invoice_merge_purchase/) | 8.0.1.0.0 (unported) | :repeat: | Compatibility between purchase and account invoice merge
 [account_invoice_period_usability](account_invoice_period_usability/) | 8.0.1.0.0 (unported) | :repeat: | Display in the supplier invoice form the fiscal period next to the invoice date
 [account_invoice_pricelist](account_invoice_pricelist/) | 8.0.1.0.0 (unported) | :repeat: | Add partner pricelist on invoices

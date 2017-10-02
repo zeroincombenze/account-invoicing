@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Account Invoice Triple Discount
+===============================
 
 This module allows to have three successive discounts on each invoice line.
 
@@ -33,6 +34,8 @@ Configuration
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -99,7 +102,6 @@ Images
 
 * Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
 
-[![Odoo Italia Associazione]]
 
 
 

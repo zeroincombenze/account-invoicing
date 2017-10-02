@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Account Payment Term Extension
+==============================
 
 This module extends the functionality of payment terms to :
 
@@ -47,6 +48,8 @@ To configure the Payment Terms and see the new options on the Payment Term Lines
 To use multiple payment days, define for each payment term line which payment days apply, separated by spaces, commas or dashes.
 
 Usage
+-----
+
 -----
 
 -----
@@ -97,7 +100,6 @@ Images
 * https://openclipart.org/detail/198659/mono-template-invoice
 * https://openclipart.org/detail/5571/calendar-icon-large
 
-[![Odoo Italia Associazione]]
 
 
 

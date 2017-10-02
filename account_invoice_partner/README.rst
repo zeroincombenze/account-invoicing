@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Automatically select invoicing partner on invoice
+=================================================
 
 On an invoice, when selecting a partner of any other type than 'invoice',
 replace the partner by an invoice contact if found.
@@ -42,6 +43,8 @@ There are no specific configuration instructions for this module.
 After you need to configure on partner profile, one contact partner as "invoice address"
 
 Usage
+-----
+
 -----
 
 -----
@@ -90,7 +93,6 @@ Images
 
 * Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
 
-[![Odoo Italia Associazione]]
 
 
 

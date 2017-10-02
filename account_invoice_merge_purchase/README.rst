@@ -14,6 +14,7 @@
 =========================
 
 Merge invoices from purchase order
+==================================
 
 This module provides a compatibility between purchase order workflow and account invoice merge module
 
@@ -33,6 +34,8 @@ Configuration
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -77,7 +80,6 @@ Credits
 
 
 
-[![Odoo Italia Associazione]]
 
 
 

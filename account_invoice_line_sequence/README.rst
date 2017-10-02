@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Account Invoice lines with sequence number
+==========================================
 
 Provides a new sequence field on invoice lines which helps to manage the order of the invoice lines.
 
@@ -34,6 +35,8 @@ Configuration
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -84,7 +87,6 @@ Images
 * Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
 
 
-[![Odoo Italia Associazione]]
 
 
 

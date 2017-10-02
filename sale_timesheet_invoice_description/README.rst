@@ -15,6 +15,7 @@
     :alt: License: AGPL-3
 
 Timesheet details invoice
+=========================
 
 Add timesheet details in invoice line to invoices related with timesheets.
 
@@ -40,6 +41,8 @@ To configure this module, you need to:
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -103,7 +106,6 @@ Credits
 
 
 
-[![Odoo Italia Associazione]]
 
 
 

@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Pricelist on Invoices
+=====================
 
 * Add a stored field pricelist on invoices, related to the partner pricelist;
 * Possibility to group by pricelist on account.invoice view;
@@ -47,6 +48,8 @@ Nothing to do.
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -103,7 +106,6 @@ Credits
 
 
 
-[![Odoo Italia Associazione]]
 
 
 

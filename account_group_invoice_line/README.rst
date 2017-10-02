@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Account Group Invoice Lines
+===========================
 
 This module was written to extend the option *Group Invoice Lines* of the journal. With this module, you can choose to group the account move lines generated when you validate an invoice per account, instead of grouping per product.
 
@@ -40,6 +41,8 @@ To configure this module, go to the menu *Accounting > Configuration > Journals 
  * **by Account**: the account move lines will be grouped by account, analytic account, analytic tags and tax, without taking into account the product.
 
 Usage
+-----
+
 -----
 
 -----
@@ -84,7 +87,6 @@ Credits
 
 
 
-[![Odoo Italia Associazione]]
 
 
 

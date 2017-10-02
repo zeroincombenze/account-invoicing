@@ -14,6 +14,7 @@
 =========================
 
 Stock picking invoicing
+=======================
 
 This module allows to create invoices directly from picking, without having to
 use sale or purchase orders.
@@ -33,6 +34,8 @@ Configuration
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -71,7 +74,6 @@ Credits
 
 
 
-[![Odoo Italia Associazione]]
 
 
 

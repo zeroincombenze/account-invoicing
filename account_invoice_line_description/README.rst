@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Account invoice line description
+================================
 
 This module allows to use only the sale description or the purchase description
 on the invoice lines depending on the invoice type.
@@ -38,6 +39,8 @@ The user needs the check "Use only product description on invoice lines" and
 the "Accountant" permission level.
 
 Usage
+-----
+
 -----
 
 -----
@@ -86,7 +89,6 @@ Images
 
 * Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
 
-[![Odoo Italia Associazione]]
 
 
 
