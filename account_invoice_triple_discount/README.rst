@@ -46,6 +46,8 @@ Usage
 
 -----
 
+-----
+
 =====
 
 Create a new invoice and add discounts in any of the three discount fields

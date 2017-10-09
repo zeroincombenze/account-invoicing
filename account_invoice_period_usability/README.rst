@@ -61,6 +61,8 @@ Usage
 
 -----
 
+-----
+
 =====
 
 On supplier invoice/refund form views, the period field is now 

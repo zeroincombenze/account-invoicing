@@ -47,6 +47,8 @@ Usage
 
 -----
 
+-----
+
 =====
 
 This module creates in the invoice form a new 'Refund' page.
