@@ -14,6 +14,7 @@
 =========================
 
 Account invoice line description
+================================
 
 This module allows to use only the product description on the invoice lines.
 
@@ -39,6 +40,8 @@ This is possible by selecting the related option in the following menu:
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -78,7 +81,6 @@ Credits
 
 
 
-[![Odoo Italia Associazione]]
 
 
 

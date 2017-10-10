@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Search by vendor reference
+==========================
 
 This module adds the ability of searching by vendor reference when searching
 invoices from different views. This is useful for example, when receiving
@@ -35,6 +36,8 @@ Configuration
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -79,7 +82,6 @@ Credits
 
 
 
-[![Odoo Italia Associazione]]
 
 
 

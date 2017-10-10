@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Account Invoice Blocking
+========================
 
 This module allows the user to set a blocking (No Follow-up) flag directly on the invoice. This facilitates the blocking of the invoice's move lines.
 
@@ -33,6 +34,8 @@ Configuration
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -79,7 +82,6 @@ Images
 
 * Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
 
-[![Odoo Italia Associazione]]
 
 
 

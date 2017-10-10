@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Create Refund Invoice
+=====================
 
 This module extends the functionality of accounting invoices to support setting
 an invoice to be a refund and to allow you to create refunds directly, without
@@ -40,6 +41,8 @@ Configuration
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -94,7 +97,6 @@ Images
 
 * Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
 
-[![Odoo Italia Associazione]]
 
 
 

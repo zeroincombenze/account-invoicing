@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Account Invoice View Payment
+============================
 
 This module allows users to access directly to the payment from an invoice
 when registering a payment or afterwards.
@@ -39,6 +40,8 @@ Configuration
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -94,7 +97,6 @@ Credits
 
 
 
-[![Odoo Italia Associazione]]
 
 
 

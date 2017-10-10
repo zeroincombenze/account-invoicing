@@ -15,6 +15,7 @@
 
 
 Account Invoice Zero Autopay
+============================
 
 Invoices with a amount of 0 are automatically set as paid.
 
@@ -58,6 +59,8 @@ Usage
 
 -----
 
+-----
+
 Known issues / Roadmap
 ----------------------
 
@@ -87,7 +90,6 @@ Credits
 
 
 
-[![Odoo Italia Associazione]]
 
 
 

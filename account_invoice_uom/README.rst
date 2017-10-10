@@ -14,6 +14,7 @@
 =========================
 
 Unit of measure for invoices
+============================
 
 The module displays the internal UoM and quantity on the invoice lines,
 retrieving them from the linked sale order(s), or from the picking lines
@@ -34,6 +35,8 @@ Configuration
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -78,7 +81,6 @@ Credits
 
 
 
-[![Odoo Italia Associazione]]
 
 
 

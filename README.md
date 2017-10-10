@@ -13,6 +13,7 @@
 ================================================================================================
 
 OCA account invoicing modules for Odoo
+======================================
 
 This project aim to deal with modules related to manage invoicing in a generic way. You'll find modules that:
 

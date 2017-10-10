@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Refund Returned Pickings from Sales Orders
+==========================================
 
 This module extends the functionality of sales orders to support marking some
 returned pickings as "To refund in Sale Order" and to allow you to create
@@ -35,6 +36,8 @@ Configuration
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -125,7 +128,6 @@ Images
 
 * Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
 
-[![Odoo Italia Associazione]]
 
 
 

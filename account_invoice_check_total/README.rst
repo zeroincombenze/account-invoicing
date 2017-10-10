@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Account Invoice Check Total
+===========================
 
 Add a Verification Total field on vendor bills.
 The user enters the taxes included invoice total as printed on the vendor bill, then enters the invoice lines and taxes. The system then checks the total computed by Odoo is the same as the verification total.
@@ -34,6 +35,8 @@ Configuration
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -82,7 +85,6 @@ Images
 
 * Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
 
-[![Odoo Italia Associazione]]
 
 
 

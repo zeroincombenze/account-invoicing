@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Refund Returned Pickings from Purchase Orders
+=============================================
 
 This module extends the functionality of purchase orders to better manage
 supplier returns and refunds.
@@ -46,6 +47,8 @@ Configuration
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -155,7 +158,6 @@ Images
 
 * Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
 
-[![Odoo Italia Associazione]]
 
 
 

@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Unique Supplier Invoice Number
+==============================
 
 This module checks that a supplier invoice/refund is not entered twice. This is important because if you enter twice the same supplier invoice, there is also a risk that you pay it twice !
 
@@ -35,6 +36,8 @@ Configuration
 
 
 Usage
+-----
+
 -----
 
 -----
@@ -73,7 +76,6 @@ Credits
 
 
 
-[![Odoo Italia Associazione]]
 
 
 

@@ -15,6 +15,7 @@
    :alt: License: AGPL-3
 
 Purchase Batch Invoicing
+========================
 
 This module extends the functionality of purchases to support batch invoicing
 purchase orders and to allow you to choose if you want them grouped by purchase
@@ -46,6 +47,8 @@ week, but it is disabled by default. To enable it:
 #. Save.
 
 Usage
+-----
+
 -----
 
 -----
@@ -115,7 +118,6 @@ Credits
 
 
 
-[![Odoo Italia Associazione]]
 
 
 
