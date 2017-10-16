@@ -50,17 +50,11 @@ To use multiple payment days, define for each payment term line which payment da
 Usage
 -----
 
------
 
------
 
------
 
------
 
------
 
------
 
 =====
 

@@ -43,17 +43,11 @@ configuration of the fiscal positions.
 Usage
 -----
 
------
 
------
 
------
 
------
 
------
 
------
 
 =====
 

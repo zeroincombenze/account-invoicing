@@ -45,17 +45,11 @@ After you need to configure on partner profile, one contact partner as "invoice 
 Usage
 -----
 
------
 
------
 
------
 
------
 
------
 
------
 
 =====
 
