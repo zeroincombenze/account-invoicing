@@ -43,15 +43,10 @@ To configure this module, go to the menu *Accounting > Configuration > Journals 
 Usage
 -----
 
------
 
------
 
------
 
------
 
------
 
 =====
 

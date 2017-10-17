@@ -42,15 +42,10 @@ This is possible by selecting the related option in the following menu:
 Usage
 -----
 
------
 
------
 
------
 
------
 
------
 
 Known issues / Roadmap
 ----------------------
