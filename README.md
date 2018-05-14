@@ -8,9 +8,53 @@
 [![try it](http://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-try-it-10.svg)](http://erp10.zeroincombenze.it)
 
 
-[![en](https://github.com/zeroincombenze/grymb/blob/master/flags/en_US.png)](https://www.facebook.com/groups/openerp.italia/)
-================================================================================================
-================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[![en](http://www.shs-av.com/wp-content/en_US.png)](http://wiki.zeroincombenze.org/it/Odoo/7.0/man)
 
 OCA account invoicing modules for Odoo
 ======================================
@@ -30,7 +74,7 @@ Available addons
 ----------------
 addon | version | OCA version | summary
 --- | --- | --- | ---
-[account_group_invoice_line](account_group_invoice_line/) | 10.0.1.0.0 | :repeat: | Add option to group invoice lines per account
+[account_group_invoice_line](account_group_invoice_line/) | 10.0.1.0.0 | 10.0.1.1.0 | Add option to group invoice lines per account
 [account_invoice_check_total](account_invoice_check_total/) | 10.0.1.0.0 | :repeat: | Check if the verification total is equal to the bill's total
 [account_invoice_fiscal_position_update](account_invoice_fiscal_position_update/) | 10.0.1.0.0 | 10.0.1.0.1 | Changing the fiscal position of an invoice will auto-update invoice lines
 [account_invoice_force_number](account_invoice_force_number/) | 10.0.1.0.0 | :repeat: | Allows to force invoice numbering on specific invoices
@@ -38,11 +82,11 @@ addon | version | OCA version | summary
 [account_invoice_line_sequence](account_invoice_line_sequence/) | 10.0.1.0.0 | :repeat: | Adds sequence field on invoice lines to manage its order.
 [account_invoice_merge](account_invoice_merge/) | 10.0.1.0.0 | :repeat: | Merge invoices in draft
 [account_invoice_partner](account_invoice_partner/) | 10.0.1.0.0 | :repeat: | Replace the partner by an invoice contact if found
-[account_invoice_refund_link](account_invoice_refund_link/) | 10.0.1.0.1 | :repeat: | Link refund invoice with its original invoice
+[account_invoice_refund_link](account_invoice_refund_link/) | 10.0.1.0.1 | 10.0.1.0.2 | Link refund invoice with its original invoice
 [account_invoice_supplier_ref_unique](account_invoice_supplier_ref_unique/) | 10.0.1.0.0 | :repeat: | Checks that supplier invoices are not entered twice
 [account_invoice_supplierinfo_update](account_invoice_supplierinfo_update/) | 10.0.1.0.0 | :repeat: | In the supplier invoice, automatically updates all products whose unit price on the line is different from the supplier price
 [account_invoice_triple_discount](account_invoice_triple_discount/) | 10.0.1.0.0 | :repeat: | Manage triple discount on invoice lines
-[account_payment_term_extension](account_payment_term_extension/) | 10.0.1.0.0 | :repeat: | Adds rounding, months, weeks and multiple payment days properties on payment term lines
+[account_payment_term_extension](account_payment_term_extension/) | 10.0.1.0.0 | 10.0.1.1.0 | Adds rounding, months, weeks and multiple payment days properties on payment term lines
 [sale_timesheet_invoice_description](sale_timesheet_invoice_description/) | 10.0.1.0.0 | :repeat: | Add timesheet details in invoice line
 
 
@@ -55,8 +99,8 @@ addon | version | OCA version | summary
 [account_invoice_merge_payment](account_invoice_merge_payment/) | 8.0.0.1.0 (unported) | 10.0.1.0.0 (unported) | Use invoice merge regarding fields on Account Payment Partner
 [account_invoice_merge_purchase](account_invoice_merge_purchase/) | 8.0.1.0.0 (unported) | :repeat: | Compatibility between purchase and account invoice merge
 [account_invoice_period_usability](account_invoice_period_usability/) | 8.0.1.0.0 (unported) | :repeat: | Display in the supplier invoice form the fiscal period next to the invoice date
-[account_invoice_pricelist](account_invoice_pricelist/) | 8.0.1.0.0 (unported) | :repeat: | Add partner pricelist on invoices
-[account_invoice_rounding](account_invoice_rounding/) | 8.0.1.0.0 (unported) | :repeat: | Unit rounded invoice
+[account_invoice_pricelist](account_invoice_pricelist/) | 8.0.1.0.0 (unported) | 10.0.1.0.0 | Add partner pricelist on invoices
+[account_invoice_rounding](account_invoice_rounding/) | 8.0.1.0.0 (unported) | 10.0.1.0.2 | Unit rounded invoice
 [account_invoice_template](account_invoice_template/) | 0.1 (unported) | :repeat: | Account Invoice Template
 [account_invoice_uom](account_invoice_uom/) | 8.0.1.0.0 (unported) | :repeat: | Unit of measure for invoices
 [account_invoice_validation_workflow](account_invoice_validation_workflow/) | 8.0.1.0.1 (unported) | :repeat: | Add "To Send" and "To Validate" states in Invoices
