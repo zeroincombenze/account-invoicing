@@ -8,9 +8,61 @@
 [![try it](http://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-try-it-9.svg)](http://erp9.zeroincombenze.it)
 
 
-[![en](https://github.com/zeroincombenze/grymb/blob/master/flags/en_US.png)](https://www.facebook.com/groups/openerp.italia/)
-================================================================================================
-================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[![en](http://www.shs-av.com/wp-content/en_US.png)](http://wiki.zeroincombenze.org/it/Odoo/7.0/man)
 
 OCA account invoicing modules for Odoo
 ======================================
@@ -37,7 +89,7 @@ addon | version | OCA version | summary
 [account_invoice_merge_payment](account_invoice_merge_payment/) | 9.0.1.0.0 | :repeat: | Use invoice merge regarding fields on Account Payment Partner
 [account_invoice_merge_purchase](account_invoice_merge_purchase/) | 9.0.1.0.0 | :repeat: | Compatibility between purchase and account invoice merge
 [account_invoice_pricelist](account_invoice_pricelist/) | 9.0.1.0.0 | :repeat: | Add partner pricelist on invoices
-[account_invoice_refund_link](account_invoice_refund_link/) | 9.0.2.0.1 | :repeat: | Link refund invoice with its original invoice
+[account_invoice_refund_link](account_invoice_refund_link/) | 9.0.2.0.1 | 9.0.2.0.2 | Link refund invoice with its original invoice
 [account_invoice_refund_option](account_invoice_refund_option/) | 9.0.1.0.0 | :repeat: | Allows you to create directly a refund without starting from an invoice
 [account_invoice_rounding](account_invoice_rounding/) | 9.0.1.0.1 | :repeat: | Unit rounded invoice
 [account_invoice_search_by_reference](account_invoice_search_by_reference/) | 9.0.1.0.0 | :repeat: | Account invoice search by reference
