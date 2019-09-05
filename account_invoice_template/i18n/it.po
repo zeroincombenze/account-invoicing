@@ -1,24 +1,26 @@
 # Translation of OpenERP Server.
 # This file contains the translation of the following modules:
 # * account_invoice_template
-# 
+#
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: account-invoicing (7.0)\n"
+"Project-Id-Version: Odoo (7.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-16 23:50+0000\n"
-"PO-Revision-Date: 2016-12-23 08:32+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: Italian (http://www.transifex.com/oca/OCA-account-invoicing-7-0/language/it/)\n"
+"POT-Creation-Date: 2017-08-11 23:44+0000\n"
+"PO-Revision-Date: 2017-08-21 07:21+0000\n"
+"Last-Translator: Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>\n"
+"Language-Team: Zeroincombenze (https://www.zeroincombenze.it)\n"
+"Language: it_IT\n"
+"invoicing-7-0/language/it/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
 #. module: account_invoice_template
 #: selection:account.invoice.template,type:0
+#: selection:account.invoice.template,type
 msgid "Customer Refund"
 msgstr "Nota di credito"
 
@@ -30,11 +32,13 @@ msgstr "Crea fattura da template"
 
 #. module: account_invoice_template
 #: selection:account.invoice.template,type:0
+#: selection:account.invoice.template,type
 msgid "Supplier Invoice"
 msgstr "Fattura fornitore"
 
 #. module: account_invoice_template
 #: selection:account.invoice.template,type:0
+#: selection:account.invoice.template,type
 msgid "Customer Invoice"
 msgstr "Fattura cliente"
 
@@ -45,28 +49,34 @@ msgstr "account.invoice.template.line"
 
 #. module: account_invoice_template
 #: view:wizard.select.invoice.template:0
+#: view:wizard.select.invoice.template
 msgid "Next"
-msgstr ""
+msgstr "Avanti"
 
 #. module: account_invoice_template
 #: view:account.invoice.template:0
+#: view:account.invoice.template
 msgid "Group By..."
 msgstr "Raggruppa per..."
 
 #. module: account_invoice_template
 #: field:wizard.select.invoice.template,state:0
+#: field:wizard.select.invoice.template,state
 msgid "State"
 msgstr "Stato"
 
 #. module: account_invoice_template
 #: field:account.invoice.template.line,template_id:0
 #: field:wizard.select.invoice.template.line,template_id:0
+#: field:account.invoice.template.line,template_id
+#: field:wizard.select.invoice.template.line,template_id
 msgid "Template"
-msgstr "Template"
+msgstr "Modello"
 
 #. module: account_invoice_template
 #: field:account.invoice.template,type:0
 #: field:account.invoice.template.line,type:0
+#: field:account.invoice.template,type field:account.invoice.template.line,type
 msgid "Type"
 msgstr "Tipo"
 
@@ -83,28 +93,33 @@ msgstr "wizard.select.invoice.template"
 #. module: account_invoice_template
 #: field:account.invoice.template.line,product_id:0
 #: field:wizard.select.invoice.template.line,product_id:0
+#: field:account.invoice.template.line,product_id
+#: field:wizard.select.invoice.template.line,product_id
 msgid "Product"
 msgstr "Prodotto"
 
 #. module: account_invoice_template
 #: code:addons/account_invoice_template/wizard/select_template.py:92
-#, python-format
+#: code:addons/account_invoice_template/wizard/select_template.py:92
 msgid "Error !"
 msgstr "Errore !"
 
 #. module: account_invoice_template
 #: field:wizard.select.invoice.template.line,sequence:0
+#: field:wizard.select.invoice.template.line,sequence
 msgid "Number"
 msgstr "Numero"
 
 #. module: account_invoice_template
 #: selection:account.invoice.template.line,type:0
+#: selection:account.invoice.template.line,type
 msgid "User input"
 msgstr "Input utente"
 
 #. module: account_invoice_template
 #: view:account.invoice.template.line:0
 #: view:wizard.select.invoice.template.line:0
+#: view:account.invoice.template.line view:wizard.select.invoice.template.line
 msgid "Invoice Template Line"
 msgstr "Riga template fattura"
 
@@ -112,6 +127,9 @@ msgstr "Riga template fattura"
 #: field:account.invoice.template,account_id:0
 #: field:account.invoice.template.line,account_id:0
 #: field:wizard.select.invoice.template.line,account_id:0
+#: field:account.invoice.template,account_id
+#: field:account.invoice.template.line,account_id
+#: field:wizard.select.invoice.template.line,account_id
 msgid "Account"
 msgstr "Conto"
 
@@ -119,38 +137,46 @@ msgstr "Conto"
 #: field:account.invoice.template,name:0
 #: field:account.invoice.template.line,name:0
 #: field:wizard.select.invoice.template.line,name:0
+#: field:account.invoice.template,name field:account.invoice.template.line,name
+#: field:wizard.select.invoice.template.line,name
 msgid "Name"
 msgstr "Nome"
 
 #. module: account_invoice_template
 #: field:wizard.select.invoice.template,line_ids:0
+#: field:wizard.select.invoice.template,line_ids
 msgid "Lines"
 msgstr "Righe"
 
 #. module: account_invoice_template
 #: field:account.invoice.template.line,invoice_line_tax_id:0
+#: field:account.invoice.template.line,invoice_line_tax_id
 msgid "Taxes"
-msgstr "Imposte"
+msgstr "IVA"
 
 #. module: account_invoice_template
 #: code:addons/account_invoice_template/wizard/select_template.py:93
-#, python-format
+#: code:addons/account_invoice_template/wizard/select_template.py:93
 msgid "At least one amount has to be non-zero!"
 msgstr "Almeno un importo deve essere diverso da zero!"
 
 #. module: account_invoice_template
 #: field:wizard.select.invoice.template.line,amount:0
+#: field:wizard.select.invoice.template.line,amount
 msgid "Amount"
 msgstr "Importo"
 
 #. module: account_invoice_template
 #: view:account.invoice.template:0 view:wizard.select.invoice.template:0
 #: field:wizard.select.invoice.template,template_id:0
+#: field:wizard.select.invoice.template,template_id
+#: view:account.invoice.template view:wizard.select.invoice.template
 msgid "Invoice Template"
 msgstr "Template fattura"
 
 #. module: account_invoice_template
 #: selection:account.invoice.template,type:0
+#: selection:account.invoice.template,type
 msgid "Supplier Refund"
 msgstr "Reso a fornitore"
 
@@ -161,40 +187,51 @@ msgstr "Scegli template fattura"
 
 #. module: account_invoice_template
 #: sql_constraint:account.invoice.template.line:0
+#: sql_constraint:account.invoice.template.line
 msgid "The sequence of the line must be unique per template !"
 msgstr "Il numero della riga deve essere unico per template!"
 
 #. module: account_invoice_template
 #: view:wizard.select.invoice.template:0
+#: view:wizard.select.invoice.template
 msgid "Load"
 msgstr "Carica"
 
 #. module: account_invoice_template
 #: view:account.invoice.template.line:0
+#: view:account.invoice.template.line
 msgid ""
-"You can refer to other lines using their sequence number (e.g. 'L(1)' for "
-"first line). Examples of code: 'L(1) * 0.2'; 'L(2) - L(1)'; 'L(1) + L(2) + "
-"L(3)'; '1250'"
-msgstr "E' possibile fare riferimento alle altre righe usando il loro numero (ad es. 'L(1)' rappresenta la prima riga). Esempi di codice: 'L(1) * 0.2'; 'L(2) - L(1)'; 'L(1) + L(2) + L(3)'; '1250'"
+"You can refer to other lines using their sequence number (e.g. 'L(1)' for"
+" first line). Examples of code: 'L(1) * 0.2'; 'L(2) - L(1)'; 'L(1) + L(2)"
+" + L(3)'; '1250'"
+msgstr ""
+"E' possibile fare riferimento alle altre righe usando il loro numero (ad "
+"es. 'L(1)' rappresenta la prima riga). Esempi di codice: 'L(1) * 0.2'; "
+"'L(2) - L(1)'; 'L(1) + L(2) + L(3)'; '1250'"
 
 #. module: account_invoice_template
 #: selection:account.invoice.template.line,type:0
+#: selection:account.invoice.template.line,type
 msgid "Computed"
 msgstr "Calcolato"
 
 #. module: account_invoice_template
 #: field:account.invoice.template.line,sequence:0
+#: field:account.invoice.template.line,sequence
 msgid "Sequence"
 msgstr "Sequenza"
 
 #. module: account_invoice_template
 #: view:account.invoice.template.line:0
 #: field:account.invoice.template.line,python_code:0
+#: field:account.invoice.template.line,python_code
+#: view:account.invoice.template.line
 msgid "Python Code"
 msgstr "Codice python"
 
 #. module: account_invoice_template
 #: selection:wizard.select.invoice.template,state:0
+#: selection:wizard.select.invoice.template,state
 msgid "Template selected"
 msgstr ""
 
@@ -206,21 +243,27 @@ msgstr "Template fatture"
 
 #. module: account_invoice_template
 #: field:account.invoice.template.line,analytic_account_id:0
+#: field:account.invoice.template.line,analytic_account_id
 msgid "Analytic Account"
 msgstr "Conto analitico"
 
 #. module: account_invoice_template
 #: field:account.invoice.template,template_line_ids:0
 #: model:ir.model,name:account_invoice_template.model_wizard_select_invoice_template_line
+#: field:account.invoice.template,template_line_ids
 msgid "Template Lines"
 msgstr "Righe template"
 
 #. module: account_invoice_template
 #: view:wizard.select.invoice.template:0
+#: view:wizard.select.invoice.template
 msgid "Cancel"
 msgstr "Annulla"
 
 #. module: account_invoice_template
 #: view:account.invoice.template:0 field:account.invoice.template,partner_id:0
+#: field:account.invoice.template,partner_id view:account.invoice.template
 msgid "Partner"
-msgstr "Partner"
+msgstr "Soggetto"
+
+

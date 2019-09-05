@@ -1,57 +1,65 @@
 # Translation of OpenERP Server.
 # This file contains the translation of the following modules:
 # * account_invoice_merge
-# 
+#
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: account-invoicing (7.0)\n"
+"Project-Id-Version: Odoo (7.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-28 00:11+0000\n"
 "PO-Revision-Date: 2015-06-03 04:47+0000\n"
-"Last-Translator: <>\n"
-"Language-Team: Italian (http://www.transifex.com/oca/OCA-account-invoicing-7-0/language/it/)\n"
+"Last-Translator: Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>\n"
+"Language-Team: Zeroincombenze (https://www.zeroincombenze.it)\n"
+"Language: it_IT\n"
+"invoicing-7-0/language/it/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
 #. module: account_invoice_merge
 #: code:addons/account_invoice_merge/wizard/invoice_merge.py:67
-#, python-format
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:67
 msgid "Not all invoices are at the same currency!"
 msgstr "Non tutte le fatture sono della stessa valuta!"
 
 #. module: account_invoice_merge
 #: view:invoice.merge:0
+#: view:invoice.merge
 msgid "Please note that:"
 msgstr ""
 
 #. module: account_invoice_merge
 #: code:addons/account_invoice_merge/wizard/invoice_merge.py:55
-#, python-format
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:55
 msgid "Not all invoices are at the same company!"
 msgstr "Non tutte le fatture sono alla stessa azienda!"
 
 #. module: account_invoice_merge
 #: view:invoice.merge:0
+#: view:invoice.merge
 msgid "Invoices will only be merged if:"
 msgstr ""
 
 #. module: account_invoice_merge
 #: view:invoice.merge:0
+#: view:invoice.merge
 msgid ""
 "* Invoice lines are exactly the same except for the product,quantity and "
 "unit"
-msgstr "Le righe della fattura sono esattamente le stesse tranne per prodotto, quantità ed unità di misura"
+msgstr ""
+"Le righe della fattura sono esattamente le stesse tranne per prodotto, "
+"quantità ed unità di misura"
 
 #. module: account_invoice_merge
 #: view:invoice.merge:0
+#: view:invoice.merge
 msgid "Merge Invoices"
 msgstr "Unisci fatture"
 
 #. module: account_invoice_merge
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:46
 #: code:addons/account_invoice_merge/wizard/invoice_merge.py:46
 #, python-format
 msgid "At least one of the selected invoices is %s!"
@@ -59,35 +67,41 @@ msgstr "Almeno una delle fatture selezionate è %s!"
 
 #. module: account_invoice_merge
 #: view:invoice.merge:0
+#: view:invoice.merge
 msgid "Lines will only be merged if:"
 msgstr ""
 
 #. module: account_invoice_merge
 #: view:invoice.merge:0
+#: view:invoice.merge
 msgid "* Invoices are in draft"
 msgstr ""
 
 #. module: account_invoice_merge
 #: code:addons/account_invoice_merge/wizard/invoice_merge.py:113
-#, python-format
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:113
 msgid "Partner Invoice"
 msgstr ""
 
 #. module: account_invoice_merge
 #: view:invoice.merge:0
+#: view:invoice.merge
 msgid ""
 "* Invoices are have same company, partner, address, currency, journal, "
 "salesman, account, type"
-msgstr "Le fatture hanno stessa azienda, partner, indirizzo, valuta, sezionale, commerciale, conto, tipo"
+msgstr ""
+"Le fatture hanno stessa azienda, partner, indirizzo, valuta, sezionale, "
+"commerciale, conto, tipo"
 
 #. module: account_invoice_merge
 #: code:addons/account_invoice_merge/wizard/invoice_merge.py:51
-#, python-format
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:51
 msgid "Not all invoices use the same account!"
 msgstr "Non tutte le fatture usano lo stesso conto!"
 
 #. module: account_invoice_merge
 #: view:invoice.merge:0
+#: view:invoice.merge
 msgid "* Invoices belong to the same partner"
 msgstr ""
 
@@ -95,29 +109,31 @@ msgstr ""
 #: view:invoice.merge:0
 #: model:ir.actions.act_window,name:account_invoice_merge.action_view_invoice_merge
 #: model:ir.model,name:account_invoice_merge.model_invoice_merge
+#: view:invoice.merge
 msgid "Merge Partner Invoice"
 msgstr "Unisci fatture"
 
 #. module: account_invoice_merge
 #: view:invoice.merge:0
+#: view:invoice.merge
 msgid "Are you sure you want to merge these invoices ?"
 msgstr "Sei sicuro che vuoi unire queste fatture? "
 
 #. module: account_invoice_merge
 #: code:addons/account_invoice_merge/wizard/invoice_merge.py:59
-#, python-format
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:59
 msgid "Not all invoices are for the same partner!"
 msgstr "Non tutte le fatture sono allo stesso partner!"
 
 #. module: account_invoice_merge
 #: code:addons/account_invoice_merge/wizard/invoice_merge.py:63
-#, python-format
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:63
 msgid "Not all invoices are of the same type!"
 msgstr "Non tutte le fatture sono dello stesso tipo!"
 
 #. module: account_invoice_merge
 #: code:addons/account_invoice_merge/wizard/invoice_merge.py:36
-#, python-format
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:36
 msgid "Please select multiple invoice to merge in the list view."
 msgstr "Selezionare  più  fatture  da unire in una vista a lista."
 
@@ -129,15 +145,21 @@ msgstr "Selezionare  più  fatture  da unire in una vista a lista."
 #: code:addons/account_invoice_merge/wizard/invoice_merge.py:62
 #: code:addons/account_invoice_merge/wizard/invoice_merge.py:66
 #: code:addons/account_invoice_merge/wizard/invoice_merge.py:70
-#, python-format
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:45
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:50
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:54
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:58
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:62
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:66
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:70
 msgid "Warning"
-msgstr "Warning"
+msgstr "Attenzione"
 
 #. module: account_invoice_merge
 #: code:addons/account_invoice_merge/wizard/invoice_merge.py:35
-#, python-format
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:35
 msgid "Warning!"
-msgstr ""
+msgstr "Attenzione!"
 
 #. module: account_invoice_merge
 #: model:ir.model,name:account_invoice_merge.model_account_invoice
@@ -146,16 +168,20 @@ msgstr "Fattura"
 
 #. module: account_invoice_merge
 #: view:invoice.merge:0
+#: view:invoice.merge
 msgid "Cancel"
 msgstr "Annulla"
 
 #. module: account_invoice_merge
 #: code:addons/account_invoice_merge/wizard/invoice_merge.py:71
-#, python-format
+#: code:addons/account_invoice_merge/wizard/invoice_merge.py:71
 msgid "Not all invoices are at the same journal!"
 msgstr "Non tutte le fatture hanno lo stesso sezionale!"
 
 #. module: account_invoice_merge
 #: view:invoice.merge:0
+#: view:invoice.merge
 msgid "or"
 msgstr "o"
+
+
