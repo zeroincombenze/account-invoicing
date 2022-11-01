@@ -29,8 +29,8 @@ class AccountInvoice(models.Model):
                         inv.amount_total,
                         precision_rounding=inv.currency_id.rounding) != 0:
                     raise UserError(_(
-                        'Please verify the price of the invoice!\n\
-                        The encoded total does not match the computed total.'))
+                        'Please verify the price of the invoice %s!\n\
+                        The encoded total does not match the computed total %s .' % (inv.check_total,inv.amount_total)))
         return super(AccountInvoice, self).action_move_create()
 
     @api.model
