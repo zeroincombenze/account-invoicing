@@ -1,3 +1,10 @@
-account-financial-tools
-stock-logistics-workflow
+partner-contact
 product-attribute
+purchase-workflow
+queue
+brand
+server-backend
+server-ux
+stock-logistics-workflow
+web
+server-tools

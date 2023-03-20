@@ -1,78 +1,58 @@
-# -*- coding: utf-8 -*-
-##############################################################################
-#
-#    OpenERP, Open Source Management Solution
-#    Copyright (c) 2010-2011 Elico Corp. All Rights Reserved.
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# Copyright 2004-2010 Tiny SPRL (http://tiny.be).
+# Copyright 2010-2011 Elico Corp.
+# Copyright 2016 Acsone (https://www.acsone.eu/)
+# Copyright 2017 Eficent Business and IT Consulting Services S.L.
+#   (http://www.eficent.com)
+# Copyright 2019 Okia SPRL
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from openerp.osv import orm
-from openerp.tools.translate import _
+from odoo import api, fields, models
+from odoo.exceptions import UserError
+from odoo.tools.translate import _
 
 
-class invoice_merge(orm.TransientModel):
+class InvoiceMerge(models.TransientModel):
     _name = "invoice.merge"
     _description = "Merge Partner Invoice"
 
-    def _dirty_check(self, cr, uid, context):
-        if context.get('active_model', '') == 'account.invoice':
-            ids = context['active_ids']
+    keep_references = fields.Boolean('Keep references from original invoices',
+                                     default=True)
+    date_invoice = fields.Date('Invoice Date')
+
+    @api.model
+    def _get_not_mergeable_invoices_message(self, invoices):
+        """Overridable function to custom error message"""
+        key_fields = invoices._get_invoice_key_cols()
+        error_msg = {}
+        if len(invoices) != len(invoices._get_draft_invoices()):
+            error_msg['state'] = (
+                _('Megeable State (ex : %s)') %
+                (invoices and invoices[0].state or _('Draf')))
+        for field in key_fields:
+            if len(set(invoices.mapped(field))) > 1:
+                error_msg[field] = invoices._fields[field].string
+        return error_msg
+
+    @api.model
+    def _dirty_check(self):
+        if self.env.context.get('active_model', '') == 'account.invoice':
+            ids = self.env.context['active_ids']
             if len(ids) < 2:
-                raise orm.except_orm(
-                    _('Warning!'),
-                    _('Please select multiple invoice to merge in the list '
+                raise UserError(
+                    _('Please select multiple invoices to merge in the list '
                       'view.'))
-            inv_obj = self.pool.get('account.invoice')
-            invs = inv_obj.read(cr, uid, ids,
-                                ['account_id', 'state', 'type', 'company_id',
-                                 'partner_id', 'currency_id', 'journal_id'])
-            for d in invs:
-                if d['state'] != 'draft':
-                    raise orm.except_orm(
-                        _('Warning'),
-                        _('At least one of the selected invoices is %s!') %
-                        d['state'])
-                if d['account_id'] != invs[0]['account_id']:
-                    raise orm.except_orm(
-                        _('Warning'),
-                        _('Not all invoices use the same account!'))
-                if d['company_id'] != invs[0]['company_id']:
-                    raise orm.except_orm(
-                        _('Warning'),
-                        _('Not all invoices are at the same company!'))
-                if d['partner_id'] != invs[0]['partner_id']:
-                    raise orm.except_orm(
-                        _('Warning'),
-                        _('Not all invoices are for the same partner!'))
-                if d['type'] != invs[0]['type']:
-                    raise orm.except_orm(
-                        _('Warning'),
-                        _('Not all invoices are of the same type!'))
-                if d['currency_id'] != invs[0]['currency_id']:
-                    raise orm.except_orm(
-                        _('Warning'),
-                        _('Not all invoices are at the same currency!'))
-                if d['journal_id'] != invs[0]['journal_id']:
-                    raise orm.except_orm(
-                        _('Warning'),
-                        _('Not all invoices are at the same journal!'))
+
+            invs = self.env['account.invoice'].browse(ids)
+            error_msg = self._get_not_mergeable_invoices_message(invs)
+            if error_msg:
+                all_msg = _("All invoices must have the same: \n")
+                all_msg += '\n'.join([value for value in error_msg.values()])
+                raise UserError(all_msg)
         return {}
 
-    def fields_view_get(self, cr, uid, view_id=None, view_type='form',
-                        context=None, toolbar=False, submenu=False):
+    @api.model
+    def fields_view_get(self, view_id=None, view_type='form', toolbar=False,
+                        submenu=False):
         """Changes the view dynamically
          @param self: The object pointer.
          @param cr: A database cursor
@@ -80,15 +60,14 @@ class invoice_merge(orm.TransientModel):
          @param context: A standard dictionary
          @return: New arch of view.
         """
-        if context is None:
-            context = {}
-        res = super(invoice_merge, self).fields_view_get(
-            cr, uid, view_id=view_id, view_type=view_type, context=context,
-            toolbar=toolbar, submenu=False)
-        self._dirty_check(cr, uid, context)
+        res = super(InvoiceMerge, self).fields_view_get(
+            view_id=view_id, view_type=view_type, toolbar=toolbar,
+            submenu=False)
+        self._dirty_check()
         return res
 
-    def merge_invoices(self, cr, uid, ids, context=None):
+    @api.multi
+    def merge_invoices(self):
         """To merge similar type of account invoices.
 
              @param self: The object pointer.
@@ -97,24 +76,22 @@ class invoice_merge(orm.TransientModel):
              @param ids: the ID or list of IDs
              @param context: A standard dictionary
 
-             @return: account invoice view
+             @return: account invoice action
         """
-        inv_obj = self.pool['account.invoice']
-        mod_obj = self.pool['ir.model.data']
-        if context is None:
-            context = {}
-        result = mod_obj._get_id(cr, uid, 'account', 'invoice_form')
-        record = mod_obj.read(cr, uid, result, ['res_id'])
-        allinvoices = inv_obj.do_merge(
-            cr, uid, context.get('active_ids', []), context)
-        return {
-            'domain': "[('id','in',[" +
-                      ','.join(map(str, allinvoices.keys())) + "])]",
-            'name': _('Partner Invoice'),
-            'view_type': 'form',
-            'view_mode': 'tree,form',
-            'res_model': 'account.invoice',
-            'view_id': False,
-            'type': 'ir.actions.act_window',
-            'search_view_id': record['res_id']
-        }
+        inv_obj = self.env['account.invoice']
+        aw_obj = self.env['ir.actions.act_window']
+        ids = self.env.context.get('active_ids', [])
+        invoices = inv_obj.browse(ids)
+        allinvoices = invoices.do_merge(keep_references=self.keep_references,
+                                        date_invoice=self.date_invoice)
+        xid = {
+            'out_invoice': 'action_invoice_tree1',
+            'out_refund': 'action_invoice_tree1',
+            'in_invoice': 'action_invoice_tree2',
+            'in_refund': 'action_invoice_tree2',
+        }[invoices[0].type]
+        action = aw_obj.for_xml_id('account', xid)
+        action.update({
+            'domain': [('id', 'in', ids + list(allinvoices.keys()))],
+        })
+        return action
