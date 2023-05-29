@@ -1,0 +1,182 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * account_invoice_line_view
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo (7.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-27 09:59+0000\n"
+"PO-Revision-Date: 2020-05-27 12:16+0200\n"
+"Last-Translator: Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>\n"
+"Language-Team: Zeroincombenze (https://www.zeroincombenze.it)\n"
+"Language: it_IT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#. module: account_invoice_line_view
+#: field:account.invoice.line,base_amt:0 field:account.invoice.line,base_amt
+#: field:account.invoice.line,base_amt
+msgid "Base Amount"
+msgstr "Base imponibile"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 view:account.invoice.line
+#: view:account.invoice.line
+msgid "Cancelled"
+msgstr "Annullato"
+
+#. module: account_invoice_line_view
+#: field:account.invoice.line,currency_id:0
+#: field:account.invoice.line,currency_id
+#: field:account.invoice.line,currency_id
+msgid "Currency"
+msgstr "Divisa"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 view:account.invoice.line
+#: view:account.invoice.line
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: account_invoice_line_view
+#: model:ir.actions.act_window,name:account_invoice_line_view.customer_action_invoice_line
+#: model:ir.ui.menu,name:account_invoice_line_view.customer_invoice_line
+msgid "Customer Invoice Lines"
+msgstr "Righe fatture clienti"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 view:account.invoice.line
+#: view:account.invoice.line
+msgid "Draft"
+msgstr "Bozza"
+
+#. module: account_invoice_line_view
+#: field:account.invoice.line,date_due:0 field:account.invoice.line,date_due
+#: field:account.invoice.line,date_due
+msgid "Due Date"
+msgstr "Data scadenza"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 view:account.invoice.line
+#: view:account.invoice.line
+msgid "Group By..."
+msgstr "Raggruppa per ..."
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 view:account.invoice.line
+#: view:account.invoice.line
+msgid "Invoice"
+msgstr "Fattura"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 field:account.invoice.line,date_invoice:0
+#: field:account.invoice.line,date_invoice view:account.invoice.line
+#: field:account.invoice.line,date_invoice view:account.invoice.line
+msgid "Invoice Date"
+msgstr "Data Fattura"
+
+#. module: account_invoice_line_view
+#: code:_description:0
+#: model:ir.model,name:account_invoice_line_view.model_account_invoice_line
+#: code:_description
+#: code:_description
+msgid "Invoice Line"
+msgstr "Righe Fattura"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 view:account.invoice.line
+#: view:account.invoice.line
+msgid "Invoice Lines"
+msgstr "Righe fatture"
+
+#. module: account_invoice_line_view
+#: field:account.invoice.line,reference:0 field:account.invoice.line,reference
+#: field:account.invoice.line,reference
+msgid "Invoice Ref"
+msgstr "Riferimento fattura"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 field:account.invoice.line,number:0
+#: field:account.invoice.line,number view:account.invoice.line
+#: field:account.invoice.line,number view:account.invoice.line
+msgid "Number"
+msgstr "Numero"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 view:account.invoice.line
+#: view:account.invoice.line
+msgid "Open"
+msgstr "Aperto"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 view:account.invoice.line
+#: view:account.invoice.line
+msgid "Paid"
+msgstr "Pagato"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 view:account.invoice.line
+#: view:account.invoice.line
+msgid "Partner"
+msgstr "Soggetto"
+
+#. module: account_invoice_line_view
+#: field:account.invoice.line,period_id:0 field:account.invoice.line,period_id
+#: field:account.invoice.line,period_id
+msgid "Period"
+msgstr "Periodo"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 view:account.invoice.line
+#: view:account.invoice.line
+msgid "Product"
+msgstr "Prodotto"
+
+#. module: account_invoice_line_view
+#: field:account.invoice.line,rate:0 field:account.invoice.line,rate
+#: field:account.invoice.line,rate
+msgid "Rate"
+msgstr "Aliquota"
+
+#. module: account_invoice_line_view
+#: field:account.invoice.line,user_id:0 field:account.invoice.line,user_id
+#: field:account.invoice.line,user_id
+msgid "Salesperson"
+msgstr "Commerciale"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 view:account.invoice.line
+#: view:account.invoice.line
+msgid "Search Invoice"
+msgstr "Cerca fattura"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 field:account.invoice.line,state:0
+#: field:account.invoice.line,state view:account.invoice.line
+#: field:account.invoice.line,state view:account.invoice.line
+msgid "Status"
+msgstr "Stato"
+
+#. module: account_invoice_line_view
+#: model:ir.actions.act_window,name:account_invoice_line_view.supplier_action_invoice_line
+#: model:ir.ui.menu,name:account_invoice_line_view.supplier_invoice_line
+msgid "Supplier Invoice Lines"
+msgstr "Righe fatture fornitori"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 view:account.invoice.line
+#: view:account.invoice.line
+msgid "Today"
+msgstr "Oggi"
+
+#. module: account_invoice_line_view
+#: view:account.invoice.line:0 view:account.invoice.line
+#: view:account.invoice.line
+msgid "Total Amount"
+msgstr "Importo totale"
+
+
