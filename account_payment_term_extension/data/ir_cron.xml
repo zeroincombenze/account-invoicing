@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="0">
+
+    <record id="cron_pospone_2_next_year" model="ir.cron">
+        <field name="name">Pospone holiday due date to next year</field>
+        <field name="active" eval="True"/>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False"/>
+        <field name="model" eval="'account.payment.term.holiday'"/>
+        <field name="function" eval="'cron_pospone_2_next_year'"/>
+        <field name="args" eval="'()'"/>
+    </record>
+
+</odoo>

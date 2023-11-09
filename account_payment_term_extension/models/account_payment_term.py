@@ -6,7 +6,7 @@
 # Copyright 2018 Simone Rubino - Agile Business Group
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-
+from datetime import datetime, date
 from dateutil.relativedelta import relativedelta
 from odoo import models, fields, api, exceptions, _
 from odoo.exceptions import ValidationError
@@ -16,45 +16,59 @@ import calendar
 
 
 class AccountPaymentTermHoliday(models.Model):
-    _name = 'account.payment.term.holiday'
+    _name = "account.payment.term.holiday"
+    _description = "Payment Term Holidays"
 
-    payment_id = fields.Many2one(comodel_name='account.payment.term')
+    payment_id = fields.Many2one(comodel_name="account.payment.term")
     holiday = fields.Date(required=True)
-    date_postponed = fields.Date(string='Postponed date', required=True)
+    date_postponed = fields.Date(string="Postponed date", required=True)
 
-    @api.constrains('holiday', 'date_postponed')
+    @api.constrains("holiday", "date_postponed")
     def check_holiday(self):
         if fields.Date.from_string(self.date_postponed) \
                 <= fields.Date.from_string(self.holiday):
             raise ValidationError(_(
-                'Holiday %s can only be postponed into the future')
+                "Holiday %s can only be postponed into the future")
                 % self.holiday)
-        if self.search_count([('payment_id', '=', self.payment_id.id),
-                              ('holiday', '=', self.holiday)]) > 1:
+        if self.search_count([("payment_id", "=", self.payment_id.id),
+                              ("holiday", "=", self.holiday)]) > 1:
             raise ValidationError(_(
-                'Holiday %s is duplicated in current payment term')
+                "Holiday %s is duplicated in current payment term")
                 % self.holiday)
-        if self.search_count([('payment_id', '=', self.payment_id.id),
-                              '|',
-                              ('date_postponed', '=', self.holiday),
-                              ('holiday', '=', self.date_postponed)]) >= 1:
+        if self.search_count([("payment_id", "=", self.payment_id.id),
+                              "|",
+                              ("date_postponed", "=", self.holiday),
+                              ("holiday", "=", self.date_postponed)]) >= 1:
             raise ValidationError(_(
-                'Date %s cannot is both a holiday and a Postponed date')
+                "Date %s cannot is both a holiday and a Postponed date")
                 % self.holiday)
+    @api.multi
+    def cron_pospone_2_next_year(self):
+
+        def next_year(date_str):
+            return datetime.strftime((datetime.strptime(date_str, "%Y-%m-%d")
+                                      + relativedelta(years=1)), "%Y-%m-%d")
+
+        today = date.today().strftime("%Y-%m-%d")
+        for pay_term in self.search([("holiday", "<=", today)]):
+            pay_term.write({
+                "holyday": next_year(pay_term.holiday),
+                "date_postponed": next_year(pay_term.date_postponed)
+            })
 
 
 class AccountPaymentTermLine(models.Model):
     _inherit = "account.payment.term.line"
 
     amount_round = fields.Float(
-        string='Amount Rounding',
-        digits=dp.get_precision('Account'),
+        string="Amount Rounding",
+        digits=dp.get_precision("Account"),
         # TODO : I don't understand this help msg ; what is surcharge ?
         help="Sets the amount so that it is a multiple of this value.\n"
              "To have amounts that end in 0.99, set rounding 1, "
              "surcharge -0.01")
-    months = fields.Integer(string='Number of Months')
-    weeks = fields.Integer(string='Number of Weeks')
+    months = fields.Integer(string="Number of Months")
+    weeks = fields.Integer(string="Number of Weeks")
 
     @api.multi
     def compute_line_amount(
@@ -69,29 +83,29 @@ class AccountPaymentTermLine(models.Model):
             :returns: computed amount for this line
         """
         self.ensure_one()
-        if self.value == 'fixed':
+        if self.value == "fixed":
             return float_round(
                 self.value_amount, precision_digits=precision_digits)
-        elif self.value == 'percent':
+        elif self.value == "percent":
             amt = total_amount * (self.value_amount / 100.0)
             if self.amount_round:
                 amt = float_round(amt, precision_rounding=self.amount_round)
             return float_round(amt, precision_digits=precision_digits)
-        elif self.value == 'balance':
+        elif self.value == "balance":
             return float_round(
                 remaining_amount,  precision_digits=precision_digits)
         return None
 
     def _decode_payment_days(self, days_char):
         # Admit space, dash and comma as separators
-        days_char = days_char.replace(' ', '-').replace(',', '-')
-        days_char = [x.strip() for x in days_char.split('-') if x]
+        days_char = days_char.replace(" ", "-").replace(",", "-")
+        days_char = [x.strip() for x in days_char.split("-") if x]
         days = [int(x) for x in days_char]
         days.sort()
         return days
 
     @api.one
-    @api.constrains('payment_days')
+    @api.constrains("payment_days")
     def _check_payment_days(self):
         if not self.payment_days:
             return
@@ -102,10 +116,10 @@ class AccountPaymentTermLine(models.Model):
             error = True
         if error:
             raise exceptions.Warning(
-                _('Payment days field format is not valid.'))
+                _("Payment days field format is not valid."))
 
     payment_days = fields.Char(
-        string='Payment day(s)',
+        string="Payment day(s)",
         help="Put here the day or days when the partner makes the payment. "
              "Separate each possible payment day with dashes (-), commas (,) "
              "or spaces ( ).")
@@ -115,17 +129,17 @@ class AccountPaymentTerm(models.Model):
     _inherit = "account.payment.term"
 
     sequential_lines = fields.Boolean(
-        string='Sequential lines',
+        string="Sequential lines",
         default=False,
         help="Allows to apply a chronological order on lines.")
     holiday_ids = fields.One2many(
-        string='Holidays', comodel_name='account.payment.term.holiday',
-        inverse_name='payment_id')
+        string="Holidays", comodel_name="account.payment.term.holiday",
+        inverse_name="payment_id")
 
     def apply_holidays(self, date):
         holiday = self.holiday_ids.search([
-            ('payment_id', '=', self.id),
-            ('holiday', '=', date)
+            ("payment_id", "=", self.id),
+            ("holiday", "=", date)
         ])
         if holiday:
             return fields.Date.from_string(holiday.date_postponed)
@@ -161,9 +175,9 @@ class AccountPaymentTerm(models.Model):
         date_ref = date_ref or fields.Date.today()
         amount = value
         result = []
-        if self.env.context.get('currency_id'):
-            currency = self.env['res.currency'].browse(
-                self.env.context['currency_id'])
+        if self.env.context.get("currency_id"):
+            currency = self.env["res.currency"].browse(
+                self.env.context["currency_id"])
         else:
             currency = self.env.user.company_id.currency_id
         prec = currency.decimal_places
@@ -175,20 +189,20 @@ class AccountPaymentTerm(models.Model):
                 next_date = fields.Date.from_string(date_ref)
                 if float_is_zero(amt, precision_digits=prec):
                     continue
-            if line.option == 'day_after_invoice_date':
+            if line.option == "day_after_invoice_date":
                 next_date += relativedelta(days=line.days,
                                            weeks=line.weeks,
                                            months=line.months)
-            elif line.option == 'fix_day_following_month':
+            elif line.option == "fix_day_following_month":
                 # Getting 1st of next month
                 next_first_date = next_date + relativedelta(day=1, months=1)
                 next_date = next_first_date + relativedelta(days=line.days - 1,
                                                             weeks=line.weeks,
                                                             months=line.months)
-            elif line.option == 'last_day_following_month':
+            elif line.option == "last_day_following_month":
                 # Getting last day of next month
                 next_date += relativedelta(day=31, months=1)
-            elif line.option == 'last_day_current_month':
+            elif line.option == "last_day_current_month":
                 # Getting last day of next month
                 next_date += relativedelta(day=31, months=0)
             next_date = self.apply_payment_days(line, next_date)
