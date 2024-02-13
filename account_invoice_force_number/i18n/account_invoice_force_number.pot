@@ -1,14 +1,12 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* account_invoice_force_number
+# 	* account_invoice_force_number
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 6.0.3\n"
-"Report-Msgid-Bugs-To: support@openerp.com\n"
-"POT-Creation-Date: 2011-11-16 16:44+0000\n"
-"PO-Revision-Date: 2011-11-16 16:44+0000\n"
-"Last-Translator: <>\n"
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,26 +14,32 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: account_invoice_force_number
-#: view:account.invoice:0
+#: model:res.groups,name:account_invoice_force_number.group_allow_invoice_force_number
+msgid "Allow \"Invoice Force Number\""
+msgstr ""
+
+#. module: account_invoice_force_number
+#: model:ir.model.fields,field_description:account_invoice_force_number.field_account_move__move_name
 msgid "Force Number"
 msgstr ""
 
 #. module: account_invoice_force_number
-#: model:ir.module.module,description:account_invoice_force_number.module_meta_information
-msgid "\n"
-"    This module allows to force the invoice numbering.\n"
-"    It displays the internal_number field. If user fills that field, the typed value will be used as invoice (and move) number. Otherwise, the next sequence sequence number will be retrieved and saved.\n"
-"    So, the new field has to be used when user doesn't want to use the default invoice numbering for a specific invoice.\n"
-"    "
+#: model:ir.model.fields,help:account_invoice_force_number.field_account_move__move_name
+msgid ""
+"Force invoice number. Use this field if\n"
+"        you don't want to use the default numbering."
 msgstr ""
 
 #. module: account_invoice_force_number
-#: model:ir.module.module,shortdesc:account_invoice_force_number.module_meta_information
-msgid "Force Invoice Number"
+#: model:ir.model,name:account_invoice_force_number.model_account_move
+msgid "Journal Entries"
 msgstr ""
 
 #. module: account_invoice_force_number
-#: model:ir.model,name:account_invoice_force_number.model_account_invoice
-msgid "Invoice"
+#: code:addons/account_invoice_force_number/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot delete an invoice after it has been validated(and received a "
+"number). You can set it back to \"Draft\"state and modify its content, then "
+"re-confirm it."
 msgstr ""
-
