@@ -1,0 +1,16 @@
+{
+    "name": "Account Invoice - Currency Date",
+    "version": "12.0.0.1.0",
+    "category": "Accounting & Finance",
+    "summary": "Store currency date on invoice for specific currency rate",
+    "author": "SHS-AV s.r.l.",
+    "website": "https://www.zeroincombenze.it/crm",
+    "development_status": "Alpha",
+    "license": "LGPL-3",
+    "depends": ["account"],
+    "version_depends": ["account==12.0.1.1"],
+    "data": ["views/account_move_view.xml"],
+    "maintainer": "Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>",
+    "installable": True,
+    "pre_init_hook": "check_4_depending",
+}
