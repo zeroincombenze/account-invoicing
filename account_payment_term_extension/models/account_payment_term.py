@@ -42,19 +42,31 @@ class AccountPaymentTermHoliday(models.Model):
             raise ValidationError(_(
                 "Date %s cannot is both a holiday and a Postponed date")
                 % self.holiday)
+
     @api.multi
     def cron_pospone_2_next_year(self):
 
-        def next_year(date_str):
-            return datetime.strftime((datetime.strptime(date_str, "%Y-%m-%d")
-                                      + relativedelta(years=1)), "%Y-%m-%d")
+        def next_year(date_str, today):
+            if date_str:
+                fmt = "%Y-%m-%d"
+                dt_pay = datetime.strptime("%d%s" % (date.today().year, date_str[4:]),
+                                           fmt)
+                if dt_pay < today:
+                    return datetime.strftime(dt_pay + relativedelta(years=1), fmt)
+                return datetime.strftime(dt_pay, fmt)
+            return date_str
 
-        today = date.today().strftime("%Y-%m-%d")
-        for pay_term in self.search([("holiday", "<=", today)]):
-            pay_term.write({
-                "holyday": next_year(pay_term.holiday),
-                "date_postponed": next_year(pay_term.date_postponed)
-            })
+        today = datetime.today()
+        for pay_term in self.search([]):
+            vals = {}
+            dt_next = next_year(pay_term.holiday, today)
+            if dt_next != pay_term.holiday:
+                vals["holiday"] = dt_next
+            dt_next = next_year(pay_term.date_postponed, today)
+            if dt_next != pay_term.date_postponed:
+                vals["date_postponed"] = dt_next
+            if vals:
+                pay_term.write(vals)
 
 
 class AccountPaymentTermLine(models.Model):

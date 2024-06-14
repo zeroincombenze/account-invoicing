@@ -1,5 +1,5 @@
 ========================================================================
-|icon| Payment Term Extension/Estensione termini di pagamento 10.0.1.1.2
+|icon| Payment Term Extension/Estensione termini di pagamento 10.0.1.1.3
 ========================================================================
 
 **Adds rounding, months, weeks and multiple payment days properties on payment term lines**
@@ -16,30 +16,35 @@ Overview | Panoramica
 
 |en| This module extends the functionality of payment terms to :
 
-* support rounding, months and weeks on payment term lines
-* allow to set more than one day of payment in payment terms
-* if a payment term date is a holiday, it is postponed to a selected date
-* allow to apply a chronological order on lines
-
-for example, with a payment term which contains 2 lines
-
-* on standard, the due date of all lines is calculated from the invoice
-  date
-* with this feature, the due date of the second line is calculated from
-  the due date of the first line
+* Support rounding, months and weeks on payment term lines
+* If a payment term date is a holiday, it is postponed to a selected date
+* Allow to apply a chronological order on lines
 
 
-|
+|it| Questo modulo estende le funzionalità dei termini di pagamento con:
 
-|it| Questo modulo estende le funzionalità dei termini di pagamento:
-
-* arrotondamenti, scadenze per mesi e settimane
-* se il pagamento è festivo, la scadenza è posticipata
-* permette di applicare un ordine cronologico alle linee
+* Arrotondamenti importi, scadenze mutliple di mesi o settimane
+* Se il pagamento è festivo, la scadenza può essere posticipata ad altra data
+* Permette di applicare un ordine cronologico alle linee
 
 
+|thumbnail|
 
-|
+.. |thumbnail| image:: https://raw.githubusercontent.com/zeroincombenze/account-invoicing/10.0/account_payment_term_extension/static/description/description.png
+
+
+Configuration | Configurazione
+------------------------------
+
+To configure the Payment Terms and see the new options on the Payment Term
+Lines, you need to:
+
+☰ Invoicing > Configuration > Management > Payment Terms
+
+To use holidays, insert the holiday and the date payment terms will be
+postponed to.
+
+
 
 Usage | Utilizzo
 ----------------
@@ -64,6 +69,16 @@ Prerequisites | Prerequisiti
 * python 2.7+ (best 2.7.5+)
 * postgresql 9.2+ (best 9.5)
 
+::
+
+    cd $HOME
+    # Follow statements activate deployment, installation and upgrade tools
+    cd $HOME
+    [[ ! -d ./tools ]] && git clone https://github.com/zeroincombenze/tools.git
+    cd ./tools
+    ./install_tools.sh -pUT
+    source $HOME/devel/activate_tools
+
 
 
 Installation | Installazione
@@ -87,43 +102,10 @@ Installation | Installazione
 
 ::
 
-    cd $HOME
-    # *** Tools installation & activation ***
-    # Case 1: you have not installed zeroincombenze tools
-    git clone https://github.com/zeroincombenze/tools.git
-    cd $HOME/tools
-    ./install_tools.sh -pT
-    source $HOME/devel/activate_tools
-    # Case 2: you have already installed zeroincombenze tools
-    cd $HOME/tools
-    ./install_tools.sh -UT
-    source $HOME/devel/activate_tools
-    # *** End of tools installation or upgrade ***
     # Odoo repository installation; OCB repository must be installed
     deploy_odoo clone -r account-invoicing -b 10.0 -G zero -p $HOME/10.0
     # Upgrade virtual environment
     vem amend $HOME/10.0/venv_odoo
-
-From UI: go to:
-
-* |menu| Setting > Activate Developer mode
-* |menu| Apps > Update Apps List
-* |menu| Setting > Apps |right_do| Select **account_payment_term_extension** > Install
-
-
-
-Configuration | Configurazione
-------------------------------
-
-To configure the Payment Terms and see the new options on the Payment Term
-Lines, you need to:
-
-☰ Invoicing > Configuration > Management > Payment Terms
-
-To use multiple payment days, define for each payment term line which payment
-days apply, separated by spaces, commas or dashes.
-To use holidays, insert the holiday and the date payment terms will be
-postponed to.
 
 
 
@@ -132,29 +114,10 @@ Upgrade | Aggiornamento
 
 ::
 
-    cd $HOME
-    # *** Tools installation & activation ***
-    # Case 1: you have not installed zeroincombenze tools
-    git clone https://github.com/zeroincombenze/tools.git
-    cd $HOME/tools
-    ./install_tools.sh -pT
-    source $HOME/devel/activate_tools
-    # Case 2: you have already installed zeroincombenze tools
-    cd $HOME/tools
-    ./install_tools.sh -UT
-    source $HOME/devel/activate_tools
-    # *** End of tools installation or upgrade ***
-    # Odoo repository upgrade
     deploy_odoo update -r account-invoicing -b 10.0 -G zero -p $HOME/10.0
     vem amend $HOME/10.0/venv_odoo
     # Adjust following statements as per your system
     sudo systemctl restart odoo
-
-From UI: go to:
-
-* |menu| Setting > Activate Developer mode
-* |menu| Apps > Update Apps List
-* |menu| Setting > Apps |right_do| Select **account_payment_term_extension** > Update
 
 
 
@@ -189,21 +152,22 @@ An Enhancement Proposal may be submitted if your idea gains ground.
 ChangeLog History | Cronologia modifiche
 ----------------------------------------
 
-10.0.0.1.2 (2023-11-09)
+10.0.1.1.3 (2024-04-14)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Holidays date posponed to next year / Avanzamento date slittamento di 1 anno
+* [QUA] Test coverage 86% (122: 17+105) [0 TestPoints] - quality rating 64 (target 100)
+
+10.0.1.1.2 (2023-11-09)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * Holidays date posponed to next year / Avanzamento date slittamento di 1 anno
-
-10.0.0.1.0 (2016-10-06)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* Initial implementation / Implementazione iniziale
 * [QUA] Test coverage 86% (122: 17+105) [0 TestPoints] - quality rating 64 (target 100)
 
 
 
-Credits | Didascalie
-====================
+Credits | Ringraziamenti
+========================
 
 Copyright
 ---------
@@ -215,33 +179,32 @@ Authors | Autori
 ----------------
 
 * Camptocamp <False>
-* Tecnativa <https://www.tecnativa.com>
+* `Tecnativa <https://www.tecnativa.com>`__
 * Agile Business Group <False>
-* Odoo Community Association (OCA) <https://odoo-community.org>
-* SHS-AV s.r.l. <https://www.zeroincombenze.it>
+* `Odoo Community Association (OCA) <https://odoo-community.org>`__
+* `SHS-AV s.r.l. <https://www.zeroincombenze.it>`__
 
 
 
-Contributors | Contributi da
-----------------------------
+Contributors | Partecipanti
+---------------------------
 
-* Yannick Vaucher <yannick.vaucher@camptocamp.com>
-* Alexis de Lattre <alexis.delattre@akretion.com>
-* Julien Coux <julien.coux@camptocamp.com>
-* Simone Rubino <simone.rubino@agilebg.com>
-* Tecnativa <https://www.tecnativa.com>
+* `Yannick Vaucher <yannick.vaucher@camptocamp.com>`__
+* `Alexis de Lattre <alexis.delattre@akretion.com>`__
+* `Julien Coux <julien.coux@camptocamp.com>`__
+* `Simone Rubino <simone.rubino@agilebg.com>`__
+* `Tecnativa <https://www.tecnativa.com>`__
 
 
 
 Maintainer | Manutenzione
 -------------------------
 
-Odoo Community Association (OCA) <https://odoo-community.org>
+* `Odoo Community Association (OCA) <https://odoo-community.org>`__
 
 
 
 ----------------
-
 
 |en| **zeroincombenze®** is a trademark of `SHS-AV s.r.l. <https://www.shs-av.com/>`__
 which distributes and promotes ready-to-use **Odoo** on own cloud infrastructure.
@@ -258,41 +221,20 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 This module is part of account-invoicing project.
 
-Last Update / Ultimo aggiornamento: 2023-11-09
+Last Update / Ultimo aggiornamento: 2024-06-14
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status
     :alt: 
-.. |Build Status| image:: https://travis-ci.org/zeroincombenze/account-invoicing.svg?branch=10.0
-    :target: https://travis-ci.com/zeroincombenze/account-invoicing
-    :alt: github.com
 .. |license gpl| image:: https://img.shields.io/badge/licence-LGPL--3-7379c3.svg
     :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
     :alt: License: LGPL-3
 .. |license opl| image:: https://img.shields.io/badge/licence-OPL-7379c3.svg
     :target: https://www.odoo.com/documentation/user/14.0/legal/licenses/licenses.html
     :alt: License: OPL
-.. |Coverage Status| image:: https://coveralls.io/repos/github/zeroincombenze/account-invoicing/badge.svg?branch=10.0
-    :target: https://coveralls.io/github/zeroincombenze/account-invoicing?branch=10.0
-    :alt: Coverage
-.. |Codecov Status| image:: https://codecov.io/gh/zeroincombenze/account-invoicing/branch/10.0/graph/badge.svg
-    :target: https://codecov.io/gh/zeroincombenze/account-invoicing/branch/10.0
-    :alt: Codecov
-.. |Tech Doc| image:: https://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-docs-10.svg
-    :target: https://wiki.zeroincombenze.org/en/Odoo/10.0/dev
-    :alt: Technical Documentation
-.. |Help| image:: https://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-help-10.svg
-    :target: https://wiki.zeroincombenze.org/it/Odoo/10.0/man
-    :alt: Technical Documentation
 .. |Try Me| image:: https://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-try-it-10.svg
     :target: https://erp10.zeroincombenze.it
     :alt: Try Me
-.. |OCA Codecov| image:: https://codecov.io/gh/OCA/account-invoicing/branch/10.0/graph/badge.svg
-    :target: https://codecov.io/gh/OCA/account-invoicing/branch/10.0
-    :alt: Codecov
-.. |Odoo Italia Associazione| image:: https://www.odoo-italia.org/images/Immagini/Odoo%20Italia%20-%20126x56.png
-   :target: https://odoo-italia.org
-   :alt: Odoo Italia Associazione
 .. |Zeroincombenze| image:: https://avatars0.githubusercontent.com/u/6972555?s=460&v=4
    :target: https://www.zeroincombenze.it/
    :alt: Zeroincombenze
@@ -316,5 +258,3 @@ Last Update / Ultimo aggiornamento: 2023-11-09
    :target: https://github.com/zeroincombenze/grymb/blob/master/certificates/ade/scope/Desktoptelematico.md
 .. |FatturaPA| image:: https://raw.githubusercontent.com/zeroincombenze/grymb/master/certificates/ade/icons/fatturapa.png
    :target: https://github.com/zeroincombenze/grymb/blob/master/certificates/ade/scope/fatturapa.md
-.. |chat_with_us| image:: https://www.shs-av.com/wp-content/chat_with_us.gif
-   :target: https://t.me/Assitenza_clienti_powERP

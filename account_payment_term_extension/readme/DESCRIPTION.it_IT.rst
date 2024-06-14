@@ -1,6 +1,5 @@
-Questo modulo estende le funzionalità dei termini di pagamento:
+Questo modulo estende le funzionalità dei termini di pagamento con:
 
-* arrotondamenti, scadenze per mesi e settimane
-* se il pagamento è festivo, la scadenza è posticipata
-* permette di applicare un ordine cronologico alle linee
-
+* Arrotondamenti importi, scadenze mutliple di mesi o settimane
+* Se il pagamento è festivo, la scadenza può essere posticipata ad altra data
+* Permette di applicare un ordine cronologico alle linee
